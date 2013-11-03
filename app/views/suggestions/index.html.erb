@@ -1,10 +1,10 @@
 <h1> <b>We all love DL 172.</b> That's why we want to help it blossom! </h1>
 <% unless @suggestions.count == 0 %>
 	<% @suggestions.each do |suggestion| %>
-	<table table-layout=fixed>
-	<tr>
+	<table class="main_table" table-layout=fixed>
+	<tr class="suggestion_rows">
 		<td><%= suggestion.comment %></td>
-		<td><%= link_to 'X', suggestion_path(suggestion),
+		<td class="align_right"><%= link_to 'X', suggestion_path(suggestion),
 						method: :delete, data: { confirm: 'Are you sure?'
 						}%></td>
 	</tr>
