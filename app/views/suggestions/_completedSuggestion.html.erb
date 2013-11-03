@@ -1,0 +1,8 @@
+<table>
+	<% @suggestions.each do |suggestion| %>
+	<tr>
+		<td><%= suggestion.comment %></td>
+		<td><button type="button">Support</button></td>
+	</tr>
+	<% end %>
+</table>
