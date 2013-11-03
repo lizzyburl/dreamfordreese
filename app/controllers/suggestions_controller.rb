@@ -8,15 +8,12 @@ class SuggestionsController < ApplicationController
 		@suggestion = Suggestion.new(suggestion_params)
 		
 		if @suggestion.save
-			redirect_to @suggestion
+			redirect_to suggestions_path
 		else
 			render 'new'
 		end
 	end
 	
-	def show
-		@suggestions = Suggestion.all
-	end
 	
 	def destroy
 		@suggestion = Suggestion.find(params[:id])
